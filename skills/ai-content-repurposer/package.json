@@ -1,15 +1,13 @@
 {
   "name": "ai-content-repurposer",
   "version": "1.0.0",
-  "description": "Agent skill to scrape blogs and YouTube video transcripts for social media repurposing.",
+  "description": "Agent skill to scrape blogs and articles for social media repurposing.",
   "scripts": {
-    "extract-blog": "node scripts/blog_content_extractor.js",
-    "extract-yt": "node scripts/youtube_transcript_fetcher.js"
+    "extract-blog": "node scripts/blog_content_extractor.js"
   },
   "dependencies": {
     "axios": "^1.6.0",
-    "cheerio": "^1.0.0-rc.12",
-    "youtubei.js": "^15.0.1"
+    "cheerio": "^1.0.0-rc.12"
   },
   "engines": {
     "node": ">=18.0.0"

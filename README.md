@@ -8,7 +8,7 @@ An open-source collection of reusable AI agent skills — structured prompts, ex
 
 | Skill | Description | Path |
 | :--- | :--- | :--- |
-| **`ai-content-repurposer`** | Extracts blog articles and YouTube transcripts, then generates optimized X threads, Reddit posts, and LinkedIn posts. | [`skills/ai-content-repurposer`](./skills/ai-content-repurposer) |
+| **`ai-content-repurposer`** | Extracts blog articles and webpages, then generates optimized X threads, Reddit posts, and LinkedIn posts. | [`skills/ai-content-repurposer`](./skills/ai-content-repurposer) |
 
 ---
 
@@ -36,10 +36,8 @@ Because these skills are designed to be **Agent-Only** (relying on lightweight l
 ### 1. Gemini / Antigravity (Native Integration)
 Antigravity natively scans the configuration directory for skills. Just tell the agent what you want to do. It already knows the skill exists and has read the `SKILL.md` file.
 
-**Prompt Examples:**
+**Prompt Example:**
 > *"Use the ai-content-repurposer skill to scrape this blog post: https://example.com/blog-post-url"*
->
-> *"Repurpose the latest video from this channel into a LinkedIn post and X thread using the content repurposer skill: https://www.youtube.com/watch?v=VIDEO_ID"*
 
 ### 2. Claude Code (Terminal/CLI Agent)
 `claude` runs directly in your terminal and has full access to the project directory. Feed the `SKILL.md` path directly to Claude in your prompt. Since Claude Code is highly agentic, it will read the markdown file, figure out what scripts it needs to run, run them, and follow the copywriting templates.
@@ -72,8 +70,8 @@ Create a `.clinerules` file in the workspace root. This file is automatically re
 You have access to a local content scraping and repurposing skill.
 Location: skills/ai-content-repurposer/
 
-When a user asks to scrape a blog, get a YouTube transcript, or write social posts:
-1. Run the appropriate Node.js extractor in `skills/ai-content-repurposer/scripts/`.
+When a user asks to scrape a blog or write social posts:
+1. Run the Node.js extractor in `skills/ai-content-repurposer/scripts/`.
 2. Apply the copywriting frameworks defined in `skills/ai-content-repurposer/guides/`.
 3. Format the final output according to the JSON schema in `skills/ai-content-repurposer/SKILL.md`.
 ```
