@@ -117,7 +117,7 @@ Your goal is to extract the core ideas, lessons, and stories from this source te
 2. A LinkedIn Post (following linkedin_posts.md rules: "see more" line break hook, one sentence per line, no external links in body)
 3. A Reddit Post (following reddit_posts.md rules: PAS or Case Study narrative, Markdown headers, TL;DR at bottom, 3 suggested subreddits)
 
-Output your response using the clean, human-readable Markdown format defined in the Output Format section. Make it clear, visually spaced, and immediately ready to copy-paste.
+CRITICAL: Do NOT output JSON. Do NOT wrap your response in a json block. You must output the content strictly in the human-readable Markdown format defined in the Output Format section so the user can easily read and copy it.
 ```
 
 ---
