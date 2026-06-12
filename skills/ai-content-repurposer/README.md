@@ -11,10 +11,12 @@ cd skills/ai-content-repurposer
 npm install
 ```
 
+The scraper is optional: agents without Node can use their built-in web-fetch tool instead (see the workflow in `SKILL.md`). The bundled scraper is preferred for URLs because it returns the article's full verbatim text, not a summarized digest.
+
 ## How It Works
 
-1. The agent runs the extractor script to pull content from a URL.
-2. The agent reads the extracted JSON output.
+1. The agent gets the source text — from the user directly, via the extractor script, or via its own fetch tool.
+2. The agent reads the extracted content.
 3. The agent generates platform-specific social posts using its own model reasoning, following the guidelines in `SKILL.md`.
 
 ## Scripts

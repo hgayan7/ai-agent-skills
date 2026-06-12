@@ -1,6 +1,6 @@
 ---
 name: ai-content-repurposer
-description: Extract blog articles and webpages, then generate optimized platform-specific social posts (X threads, LinkedIn posts, Reddit posts) using agent reasoning.
+description: Turn a blog post, article, webpage, or any long-form text into platform-optimized social posts — X (Twitter) threads, LinkedIn posts, and Reddit posts. Use whenever the user wants to share, promote, announce, or repurpose an article or URL on social media, or asks to "make a thread", "write a LinkedIn post", or "post this on Reddit" from existing content — even if they never say "repurpose". Bundled scraper extracts the source; generation uses agent reasoning, no API keys.
 ---
 
 # AI Content Repurposer Skill
@@ -20,13 +20,15 @@ After extraction, you (the agent) generate platform-specific social posts using 
 
 ## Workflow
 
-1.  **Extract the source content**:
-    Run the scraper script:
-    ```bash
-    node scripts/blog_content_extractor.js "https://example.com/some-article"
-    ```
+1.  **Get the source text** — first available path wins:
+    - **User-provided text:** if the user already has the text (a transcript, draft, newsletter, or pasted article), use it directly and skip to step 3.
+    - **Bundled scraper (preferred for URLs):** deterministic, and returns the article's full clean text rather than a summary. Needs Node ≥ 18 — if `node_modules/` is missing in this skill's directory, run `npm install` there once first.
+      ```bash
+      node scripts/blog_content_extractor.js "https://example.com/some-article"
+      ```
+    - **Your built-in fetch tool (fallback):** if Node isn't available or the install fails, fetch the URL with your environment's web-fetch capability instead. Make sure you obtain the article's actual full text, not a summarized digest — the platform guides rely on the source's real phrasing, numbers, and examples.
 
-2.  **Read the extracted JSON**:
+2.  **Read the extracted JSON** (scraper path only):
     The script outputs a JSON object to stdout. Parse it to get the `title`, `content`, `wordCount`, and `contentType`.
 
 3.  **Read the Platform Repurposing Guides**:
@@ -36,7 +38,7 @@ After extraction, you (the agent) generate platform-specific social posts using 
     - [Reddit Posts Guide](./guides/reddit_posts.md)
 
 4.  **Generate social posts**:
-    Format your response to match the [Output Format](#output-format) structure, ensuring all platform-specific copy matches the rules defined in the guides.
+    Format your response to match the [Output Format](#output-format) structure, ensuring all platform-specific copy matches the rules defined in the guides. If the user asked for specific platforms only (e.g., just a LinkedIn post), generate only those sections; default to all three when unspecified.
 
 ---
 
@@ -124,7 +126,7 @@ CRITICAL: Do NOT output JSON. Do NOT wrap your response in a json block. You mus
 
 ## Best Practices
 
-1.  **Safety Truncation**: Truncate extracted content to ~1,500 words or 6,000 characters before generating posts to avoid overwhelming your context.
+1.  **Safety Truncation**: The script hard-caps extraction at 10,000 words; for generation, work from roughly the first 1,500 words (~6,000 characters) — enough to capture the core ideas without flooding your context. Read deeper only if the piece's key value sits in later sections.
 2.  **Clean HTML Extraction**: The scraper already removes `<script>`, `<style>`, `<nav>`, `<header>`, and `<footer>` tags — but verify the output is clean before generating.
 3.  **Character Validation**: After generating X threads, verify each tweet is strictly under 280 characters. Trim if necessary.
 4.  **Tone Matching**: Match the writing tone to the source content — technical for dev blogs, conversational for vlogs, professional for business content.
@@ -134,4 +136,5 @@ CRITICAL: Do NOT output JSON. Do NOT wrap your response in a json block. You mus
 ## Limitations
 
 - **Paywalled Blogs**: The scraper does not support paywalled articles requiring user authentication.
-- **Dynamic JS Sites**: Basic single-page apps that require full client-side Javascript execution to load text might return empty content.
+- **Dynamic JS Sites**: Basic single-page apps that require full client-side Javascript execution to load text might return empty content. (Your built-in fetch tool may handle these better — fall back to it.)
+- **No Node available**: The scraper is an optimization, not a requirement — use the fetch-tool fallback from step 1.
