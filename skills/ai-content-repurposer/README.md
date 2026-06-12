@@ -6,8 +6,9 @@ An agent-only skill that extracts blog articles and webpages, then empowers AI a
 
 ## Installation
 
+From this skill's directory:
+
 ```bash
-cd skills/ai-content-repurposer
 npm install
 ```
 
