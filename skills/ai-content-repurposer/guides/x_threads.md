@@ -60,6 +60,10 @@ Inside each body tweet, structure the text as:
 - A 5-tweet thread with 5 strong points beats a 10-tweet thread with 5 strong points and 5 filler
 - Each tweet should deliver one standalone insight — valuable even if read alone
 
+### Step 6: Keep the First Person Honest
+
+Many hook formulas below read as lived experience ("I spent 6 months studying..."). **Never fabricate firsthand experience the poster doesn't have.** When repurposing someone else's article, the poster didn't do the studying or run the experiment — attribute it ("New breakdown of every viral tweet from 2024 — one pattern nobody talks about:") or frame it as discovery ("I just read a study of 40 apps. The numbers are uncomfortable:"). The specificity drives the engagement, not the pronoun — and one probing reply exposes a faked story. First-person formulas verbatim ONLY when the experience is genuinely the poster's.
+
 ---
 
 ## Hook Formulas
@@ -315,6 +319,7 @@ Before outputting a thread, verify:
 - [ ] No "Thread 🧵" or "A thread:" labels anywhere
 - [ ] Last tweet is a pure CTA with no new information
 - [ ] Tone is conversational, not formal/academic
+- [ ] No fabricated firsthand experience — first-person claims are genuinely the poster's, or attributed to the source
 - [ ] Bullets use → or • instead of markdown dashes
 - [ ] No links in tweet 1
 - [ ] Thread is 4–7 tweets total

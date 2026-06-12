@@ -104,6 +104,26 @@ If you need to link to the original blog/article:
 
 ---
 
+## The Authenticity Rule
+
+Most formulas below are written in the first person ("I tested...", "I watched...", "My project..."). They work BECAUSE they read as lived experience — which is exactly why faking it backfires.
+
+> **Never fabricate firsthand experience the poster doesn't have.**
+
+When repurposing someone else's article (the common case for this skill), the poster did not run the experiment, suffer the failure, or ship the migration described in the source. Writing "I've seen X go sideways" or "I grew Y to Z" on their behalf invents a history — and one probing comment ("oh interesting, which migration?") exposes it. The poster's credibility takes the hit, not yours.
+
+Reframe honestly instead — secondhand framing performs nearly as well, because curiosity and specificity drive the click, not the pronoun:
+
+- ✅ "I was reading a breakdown of [topic] and one point stopped me:"
+- ✅ "This case study changed how I think about [topic]:"
+- ✅ "[Source] audited 40 apps. The results are uncomfortable:"
+- ❌ "I've seen migrations go sideways..." (when the poster hasn't)
+- ❌ "I tested 5 systems for 6 months." (when the source author did the testing)
+
+Use the first-person formulas verbatim ONLY when the experience genuinely belongs to the poster — their own draft, their own story, or experience they've explicitly told you about.
+
+---
+
 ## Hook Formulas
 
 ### 1. The Counterintuitive Statement
@@ -484,6 +504,7 @@ Before outputting a LinkedIn post, verify:
 - [ ] One sentence per line — no walls of text
 - [ ] Blank lines between every thought block
 - [ ] Tone is conversational, not corporate/formal
+- [ ] No fabricated firsthand experience — first-person claims are genuinely the poster's, or reframed as secondhand ("I was reading...")
 - [ ] No external links in the post body
 - [ ] Emojis used sparingly (1-3 max) as visual anchors
 - [ ] Bullets use → or • instead of markdown dashes

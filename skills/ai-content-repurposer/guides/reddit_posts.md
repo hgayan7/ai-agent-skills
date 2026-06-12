@@ -89,6 +89,12 @@ Choose one of two proven structures:
 
 ---
 
+## The Authenticity Rule (highest stakes on Reddit)
+
+The formulas below lean on personal stories ("I spent 3 years building an app nobody used"). **Never fabricate firsthand experience the poster doesn't have.** Reddit is the platform where this fails hardest: commenters probe details, sniff out invented stories, and the result is a removed post, a roasted account, and brand damage if the poster is affiliated with a company. When repurposing someone else's article, attribute it honestly — "I found a breakdown of [X] and the data surprised me:" or "[Source] audited 40 apps; sharing the takeaways:" — and disclose affiliation where it exists (see Linking Etiquette). Honest framing + genuinely useful content is exactly what Reddit rewards. First-person story formulas verbatim ONLY when the story is genuinely the poster's.
+
+---
+
 ## Title Formulas
 
 The title is **80-90% of your success** on Reddit. It's your only pitch.
@@ -557,7 +563,7 @@ Before outputting a Reddit post, verify:
 - [ ] Title is NOT clickbait — the post delivers on its promise
 - [ ] No marketing language ("ULTIMATE", "incredible", "game-changer")
 - [ ] Post provides full standalone value — no click required
-- [ ] Written in first-person, conversational tone
+- [ ] Written in a conversational first-person voice WITHOUT fabricated experience — use honest secondhand framing ("I found this breakdown...") when the source isn't the poster's own work
 - [ ] Formatted with ### headers, bold, and short paragraphs
 - [ ] Double line breaks between all paragraphs
 - [ ] Lists use numbered or bullet format (not dense paragraphs)
